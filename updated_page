@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+    <h1>Welcome to the New Page!</h1>
+``
+    <div id="result"></div>
+
+    <script>
+        // Retrieve the bold text from the URL query parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const boldText = urlParams.get("boldText");
+
+        // Display the bold text on the page
+        if (boldText) {
+            const resultElement = document.getElementById("result");
+            resultElement.innerHTML = `<h2>${boldText}</h2>`;
+        }
+    </script>
+</body>
+
+</html>
