@@ -9,28 +9,25 @@
     <link rel="stylesheet" href="main.css">
 </head>
 
+<body>
+    <!-- Header -->
+    <div class="header">
+        <h1>My Website</h1>
+        <p>With a <b>flexible</b> layout.</p>
+    </div>
 
-    <body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+    <!--USED TO OPEN A NEW WEBPAGE AS SOON AS THE POINTER IS ON THE FIRST LINK-->
+        <a href="#" onmouseenter="handleLinkClick(event)">Link 1</a>
+        <a href="#" onclick="handleLinkClick(event)">Link 2</a>
+        <a href="#" onclick="handleLinkClick(event)">Link 3</a>
+        <a href="#" onclick="handleLinkClick(event)">Link 4</a>
+    </div>
 
-       
-        
-        <!-- Header -->
-        <div class="header">
-          <h1>My Website</h1>
-          <p>With a <b>flexible</b> layout.</p>
-        </div>
-        
-        <!-- Navigation Bar -->
-        <div class="navbar">
-          <a href="#">Link</a>
-          <a href="#">Link</a>
-          <a href="#">Link</a>
-          <a href="#">Link</a>
-        </div>
-        
-        <!-- The flexible grid (content) -->
-        <div class="row">
-          <div class="side">
+    <!-- The flexible grid (content) -->
+    <div class="row">
+        <div class="side">
             <h2>About Me</h2>
             <h5>Photo of me:</h5>
             <div class="fakeimg" style="height:200px;">Image</div>
@@ -40,28 +37,43 @@
             <div class="fakeimg" style="height:60px;">Image</div><br>
             <div class="fakeimg" style="height:60px;">Image</div><br>
             <div class="fakeimg" style="height:60px;">Image</div>
-          </div>
-          <div class="main">
+        </div>
+        <div class="main">
             <h2>TITLE HEADING</h2>
             <h5>Title description, Dec 7, 2017</h5>
             <div class="fakeimg" style="height:200px;">Image</div>
             <p>Some text..</p>
-            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                ullamco.</p>
             <br>
             <h2>TITLE HEADING</h2>
             <h5>Title description, Sep 2, 2017</h5>
             <div class="fakeimg" style="height:200px;">Image</div>
             <p>Some text..</p>
-            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-          </div>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                ullamco.</p>
         </div>
-        
-        <!-- Footer -->
-        <div class="footer">
-          <h2>Footer</h2>
-        </div>
-        
-        </body>
-        </html>
-        
-        
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <h2>Footer</h2>
+    </div>
+
+    <script>
+        function handleLinkClick(event) {
+            event.preventDefault();
+            var link = event.target;
+            var text = "Akshardham mahotsav ni jav";
+            var boldText = "<b>" + text + "</b>";
+            var newWindow = window.open("", "_blank");
+            newWindow.document.open();
+            newWindow.document.write("<html><head><title>New Page</title></head><body><h1>" + boldText + "</h1></body></html>");
+            newWindow.document.close();
+        }
+    </script>
+</body>
+
+</html>
